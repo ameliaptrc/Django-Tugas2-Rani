@@ -29,7 +29,7 @@ Jawabannya adalah Ya, kita dapat membuat aplikasi web berbasis Django tanpa meng
 - Untuk pemetaan data template, terdapat ```nama``` dan ```npm``` lalu terdapat detail list barang sesuai dengan apa yang diinginkan.
 
 #### Poin 4
-- Membuat aplikasi di Herokuapp dan menghubungkannya di github dengan cara mengakses repository kita dan masuk ke secret dan menambahkan dua secrets yaitu ```HEROKU_API_KEY``` dan ```HEROKU_AP_NAME```. Setelah itu di deploy sesuai dengan perintahnya atau menggunakan re-run jobs agar deploy dengan sempurna.
+- Membuat aplikasi di Herokuapp dan menghubungkannya di github dengan cara mengakses repository kita dan masuk ke secret dan menambahkan dua secrets yaitu ```HEROKU_API_KEY``` dan ```HEROKU_APP_NAME```. Setelah itu di deploy sesuai dengan perintahnya atau menggunakan re-run jobs agar deploy dengan sempurna.
 
 
 ### Credits:
