@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core import serializers
-from mywatchlist.models import BarangWatchlist
+from mywatchlist.models import MyWatchlist
 
 # Create your views here.
 
 def my_watchlist(request):
-    data_my_watchlist = BarangWatchlist.objects.all()
+    data_my_watchlist = MyWatchlist.objects.all()
     watched = 0
     unwatched = 0
     response = ""
@@ -30,9 +30,9 @@ def my_watchlist(request):
     return render(request, 'watchlist.html',context)
 
 def show_xml(request):
-    data = BarangWatchlist.objects.all()
+    data = MyWatchlist.objects.all()
     return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
 
 def show_json(request):
-    data = BarangWatchlist.objects.all()
+    data = MyWatchlist.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
