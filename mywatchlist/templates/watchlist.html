@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+  <h1>Lab 1 Assignment PBP/PBD</h1>
+
+  <h5>Name: </h5>
+  <p>{{nama}}</p>
+
+  <h5>Student ID: </h5>
+  <p>{{npm}}</p>
+
+  <table>
+    <tr>
+      <th>watched</th>
+      <th>title</th>
+      <th>rating</th>
+      <th>release Date</th>
+      <th>review</th>
+    </tr>
+{% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+{% for movie in list_movie %}
+    <tr>
+        <th>{{movie.watched}}</th>
+        <th>{{movie.title}}</th>
+        <th>{{movie.rating}}</th>
+        <th>{{movie.release_date}}</th>
+        <th>{{movie.review}}</th>
+    </tr>
+{% endfor %}
+  </table>
+
+ {% endblock content %}

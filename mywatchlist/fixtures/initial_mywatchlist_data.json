@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.barangwatchlist",
+        "pk":1,
+        "fields":{
+            "watched":"No",
+            "title":"When Harry Met Sally",
+            "rating": "7.7",
+            "release_date" : "21/7/1989",
+            "review" :"Funny film and for romantic comedies, best of the best"
+        }
+},
+{
+        "model":"mywatchlist.barangwatchlist",
+        "pk":2,
+        "fields":{
+            "watched":"Yes",
+            "title":"Amelie",
+            "rating": "8.9",
+            "release_date" : "16/7/2002",
+            "review" :"Delicious pastry movie and lighthearted fantasy"
+         }
+    },
+    {
+        "model":"mywatchlist.barangwatchlist",
+        "pk":3,
+        "fields":{
+            "watched":"Yes",
+            "title":"Bring It On",
+            "rating": "6.4",
+            "release_date" : "21/10/2000",
+            "review" :"Smart, sassy movie, but expect raunchy humor" 
+        }
+    },
+    {
+        "model":"mywatchlist.barangwatchlist",
+        "pk":4,
+        "fields":{
+            "watched":"Yes",
+            "title":"Mean Girls",
+            "rating": "8.4",
+            "release_date" : "30/4/2004",
+            "review" :"Fun movie that can be enjoyed by the adult"
+        }
+},
+{
+        "model":"mywatchlist.barangwatchlist",
+        "pk":5,
+        "fields":{
+            "watched":"Yes",
+            "title":"10 Things I Hate About You",
+            "rating": "6.9",
+            "release_date" : "31/3/1999",
+            "review" :"Two love stories that interesting to watch"
+        }
+    },
+    {
+        "model":"mywatchlist.barangwatchlist",
+        "pk":6,
+        "fields":{
+            "watched":"Yes",
+            "title":"The Princess Diaries",
+            "rating": "6.4",
+            "release_date" : "24/9/2002",
+            "review" :"A light funny movie for a everyone"
+        }
+    },
+    {
+        "model":"mywatchlist.barangwatchlist",
+        "pk":7,
+        "fields":{
+            "watched":"Yes",
+            "title":"Legally Blondes",
+            "rating": "7.0",
+            "release_date" : "13/7/2001",
+            "review" :"featherweight comedy balanced between silliness and charm"
+        }
+},
+{
+        "model":"mywatchlist.barangwatchlist",
+        "pk":8,
+        "fields":{
+            "watched":"No",
+            "title":"Never Been Kissed",
+            "rating": "6.0",
+            "release_date" : "9/4/1999",
+            "review" :"upbeat romantic comedy with underlying themes of self-respect"
+        }
+    },
+    {
+        "model":"mywatchlist.barangwatchlist",
+        "pk":9,
+        "fields":{
+            "watched":"No",
+            "title":"13 Going On 30",
+            "rating": "6.2",
+            "release_date" : "23/4/2004",
+            "review" :"delightful and sweet fantasy about a teenager"
+        }
+    },
+    {
+        "model":"mywatchlist.barangwatchlist",
+        "pk":10,
+        "fields":{
+            "watched":"Yes",
+            "title":"Flipped",
+            "rating": "5.5",
+            "release_date" : "6/8/2010",
+            "review" :"sweet, charming, moving, lovely coming of age"
+        }
+}
+]
