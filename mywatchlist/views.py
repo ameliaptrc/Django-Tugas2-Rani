@@ -15,7 +15,7 @@ def my_watchlist(request):
             watched += 1
         else:
             unwatched += 1
-    if (watched >= unwatched):
+    if (watched > unwatched):
         response = "Selamat, kamu sudah banyak menonton!"
     if (watched == unwatched):
         response = "Waduh, jatah menonton kamu dan belum menonton kamu setengah - setengah nih"
@@ -26,8 +26,7 @@ def my_watchlist(request):
         'nama': 'Amelia Putri Chaerani',
         'npm' : '2106751985',
         'response': response,
-
-}
+        }
     return render(request, 'watchlist.html',context)
 
 def show_xml(request):
