@@ -3,7 +3,7 @@
         "model":"mywatchlist.barangwatchlist",
         "pk":1,
         "fields":{
-            "watched":"No",
+            "watched":"False",
             "title":"When Harry Met Sally",
             "rating": "7.7",
             "release_date" : "21/7/1989",
@@ -14,7 +14,7 @@
         "model":"mywatchlist.barangwatchlist",
         "pk":2,
         "fields":{
-            "watched":"Yes",
+            "watched":"True",
             "title":"Amelie",
             "rating": "8.9",
             "release_date" : "16/7/2002",
@@ -25,7 +25,7 @@
         "model":"mywatchlist.barangwatchlist",
         "pk":3,
         "fields":{
-            "watched":"Yes",
+            "watched":"True",
             "title":"Bring It On",
             "rating": "6.4",
             "release_date" : "21/10/2000",
@@ -36,7 +36,7 @@
         "model":"mywatchlist.barangwatchlist",
         "pk":4,
         "fields":{
-            "watched":"Yes",
+            "watched":"True",
             "title":"Mean Girls",
             "rating": "8.4",
             "release_date" : "30/4/2004",
@@ -47,7 +47,7 @@
         "model":"mywatchlist.barangwatchlist",
         "pk":5,
         "fields":{
-            "watched":"Yes",
+            "watched":"True",
             "title":"10 Things I Hate About You",
             "rating": "6.9",
             "release_date" : "31/3/1999",
@@ -58,7 +58,7 @@
         "model":"mywatchlist.barangwatchlist",
         "pk":6,
         "fields":{
-            "watched":"Yes",
+            "watched":"True",
             "title":"The Princess Diaries",
             "rating": "6.4",
             "release_date" : "24/9/2002",
@@ -69,7 +69,7 @@
         "model":"mywatchlist.barangwatchlist",
         "pk":7,
         "fields":{
-            "watched":"Yes",
+            "watched":"True",
             "title":"Legally Blondes",
             "rating": "7.0",
             "release_date" : "13/7/2001",
@@ -80,7 +80,7 @@
         "model":"mywatchlist.barangwatchlist",
         "pk":8,
         "fields":{
-            "watched":"No",
+            "watched":"False",
             "title":"Never Been Kissed",
             "rating": "6.0",
             "release_date" : "9/4/1999",
@@ -91,7 +91,7 @@
         "model":"mywatchlist.barangwatchlist",
         "pk":9,
         "fields":{
-            "watched":"No",
+            "watched":"False",
             "title":"13 Going On 30",
             "rating": "6.2",
             "release_date" : "23/4/2004",
@@ -102,7 +102,7 @@
         "model":"mywatchlist.barangwatchlist",
         "pk":10,
         "fields":{
-            "watched":"Yes",
+            "watched":"True",
             "title":"Flipped",
             "rating": "5.5",
             "release_date" : "6/8/2010",
