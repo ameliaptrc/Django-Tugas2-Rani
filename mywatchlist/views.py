@@ -19,7 +19,7 @@ def my_watchlist(request):
         response = "Selamat, kamu sudah banyak menonton!"
     elif (watched == unwatched):
         response = "Waduh, jatah menonton kamu dan belum menonton kamu setengah - setengah nih"
-    else:
+    elif(watched <= unwatched):
         response = "Wah, kamu masih sedikit menonton"
     context = {
         'list_movie': data_my_watchlist,
