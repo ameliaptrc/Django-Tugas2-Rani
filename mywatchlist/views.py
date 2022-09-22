@@ -17,7 +17,7 @@ def my_watchlist(request):
             unwatched += 1
     if (watched >= unwatched):
         response = "Selamat, kamu sudah banyak menonton!"
-    if (watched == unwatched):
+    elif (watched == unwatched):
         response = "Waduh, jatah menonton kamu dan belum menonton kamu setengah - setengah nih"
     else:
         response = "Wah, kamu masih sedikit menonton"
