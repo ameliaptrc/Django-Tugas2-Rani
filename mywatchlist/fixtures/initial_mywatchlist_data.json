@@ -1,6 +1,6 @@
 [
     {
-        "model":"mywatchlist.z",
+        "model":"mywatchlist.barangwatchlist",
         "pk":1,
         "fields":{
             "watched":"No",
