@@ -5,7 +5,7 @@
         "fields":{
             "watched":"False",
             "title":"When Harry Met Sally",
-            "rating": "7.7",
+            "rating": "3.3",
             "release_date" : "21/7/1989",
             "review" :"Funny film and for romantic comedies, best of the best"
         }
@@ -16,7 +16,7 @@
         "fields":{
             "watched":"True",
             "title":"Amelie",
-            "rating": "8.9",
+            "rating": "4.9",
             "release_date" : "16/7/2002",
             "review" :"Delicious pastry movie and lighthearted fantasy"
          }
@@ -27,7 +27,7 @@
         "fields":{
             "watched":"True",
             "title":"Bring It On",
-            "rating": "6.4",
+            "rating": "3",
             "release_date" : "21/10/2000",
             "review" :"Smart, sassy movie, but expect raunchy humor" 
         }
@@ -38,7 +38,7 @@
         "fields":{
             "watched":"True",
             "title":"Mean Girls",
-            "rating": "8.4",
+            "rating": "4",
             "release_date" : "30/4/2004",
             "review" :"Fun movie that can be enjoyed by the adult"
         }
@@ -49,7 +49,7 @@
         "fields":{
             "watched":"True",
             "title":"10 Things I Hate About You",
-            "rating": "6.9",
+            "rating": "4.8",
             "release_date" : "31/3/1999",
             "review" :"Two love stories that interesting to watch"
         }
@@ -60,7 +60,7 @@
         "fields":{
             "watched":"True",
             "title":"The Princess Diaries",
-            "rating": "6.4",
+            "rating": "3.9",
             "release_date" : "24/9/2002",
             "review" :"A light funny movie for a everyone"
         }
@@ -71,7 +71,7 @@
         "fields":{
             "watched":"True",
             "title":"Legally Blondes",
-            "rating": "7.0",
+            "rating": "4.4",
             "release_date" : "13/7/2001",
             "review" :"featherweight comedy balanced between silliness and charm"
         }
@@ -82,7 +82,7 @@
         "fields":{
             "watched":"False",
             "title":"Never Been Kissed",
-            "rating": "6.0",
+            "rating": "2.5",
             "release_date" : "9/4/1999",
             "review" :"upbeat romantic comedy with underlying themes of self-respect"
         }
@@ -93,7 +93,7 @@
         "fields":{
             "watched":"False",
             "title":"13 Going On 30",
-            "rating": "6.2",
+            "rating": "3.6",
             "release_date" : "23/4/2004",
             "review" :"delightful and sweet fantasy about a teenager"
         }
@@ -104,7 +104,7 @@
         "fields":{
             "watched":"True",
             "title":"Flipped",
-            "rating": "5.5",
+            "rating": "5",
             "release_date" : "6/8/2010",
             "review" :"sweet, charming, moving, lovely coming of age"
         }
