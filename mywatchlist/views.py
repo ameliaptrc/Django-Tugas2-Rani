@@ -11,7 +11,7 @@ def my_watchlist(request):
     unwatched = 0
     response = ""
     for movie in data_my_watchlist:
-        if (movie.watched == True):
+        if (movie.watched == "True"):
             watched += 1
         else:
             unwatched += 1
