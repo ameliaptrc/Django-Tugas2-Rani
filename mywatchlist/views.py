@@ -15,11 +15,11 @@ def my_watchlist(request):
             watched += 1
         else:
             unwatched += 1
-    if (watched >= unwatched):
+    if (watched > unwatched):
         response = "Selamat, kamu sudah banyak menonton!"
     elif (watched == unwatched):
         response = "Waduh, jatah menonton kamu dan belum menonton kamu setengah - setengah nih"
-    elif(watched <= unwatched):
+    elif(watched < unwatched):
         response = "Wah, kamu masih sedikit menonton"
     context = {
         'list_movie': data_my_watchlist,
