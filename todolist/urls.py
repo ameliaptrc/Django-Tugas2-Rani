@@ -1,5 +1,12 @@
 from django.urls import path
-from todolist.views import show_todolist,register, login_user,logout_user,create_task,delete_task,status
+from todolist.views import delete_task, show_todolist
+from todolist.views import register
+from todolist.views import login_user
+from todolist.views import logout_user
+from todolist.views import create_task
+from todolist.views import delete_task
+from todolist.views import status
+
 
 app_name = 'todolist'
 
