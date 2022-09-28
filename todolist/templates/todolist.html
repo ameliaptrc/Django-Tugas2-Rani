@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+        background: linear-gradient(#9F98E8, #aff6cf);
+        font-family:Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+</style>
+        <h1>Hi! {{nama}} Ini To-do List Yang Dikerjakan! </h1>
+
+
+    <table border="2">
+        <tr>
+        <th>Date</th>
+        <th>Task</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for Task in list_task %}
+        <tr>
+            <th>{{Task.date}}</th>
+            <th>{{Task.title}}</th>
+            <th>{{Task.description}}</th>
+                {% if Task.is_finished %}
+                    <th>Selesai</th>
+                    {% else %}
+                    <th>Belum Selesai</th>
+                    {% endif %}
+                    <th><button><a href="{% url 'todolist:status' Task.id %}">Change Status</a></button>
+                        <button><a href="{% url 'todolist:delete_task' Task.id %}">Delete Task</a></button></th>
+        </tr>
+{% endfor %}
+</table>
+<br>
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+<button ><a href="{% url 'todolist:create_task' %}">Create Task</a></button>
+
+{% endblock content %}
