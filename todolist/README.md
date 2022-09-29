@@ -69,3 +69,9 @@
 ###### Melakukan deployment ke Heroku terhadap aplikasi yang sudah kamu buat sehingga nantinya dapat diakses oleh teman-temanmu melalui Internet.
 - Sebelum  mendeploy, kita harus melakukan git add, commit,push terlebih dahulu
 - Setelah itu, aplikasi yang sudah kita punya akan berintegrasi dengan todolist kita sendiri karena telah dimasukkan ```APP_NAME``` dan ```API_KEY``` nya.
+###### Membuat dua akun pengguna dan tiga dummy data menggunakan model Task pada akun masing-masing di situs web Heroku.
+akun pertama:
+    ![image](https://user-images.githubusercontent.com/103547185/192919554-3cd03cca-b61e-43b9-a39c-5fec1ecba99e.png)
+akun kedua:
+    ![image](https://user-images.githubusercontent.com/103547185/192921183-b7672a21-5053-4210-ac3b-3e9efdabdd1b.png)
+
