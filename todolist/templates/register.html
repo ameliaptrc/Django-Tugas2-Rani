@@ -1,34 +1,59 @@
 {% extends 'base.html' %}
 
-{% block meta %}
-<title>Registrasi Akun</title>
-{% endblock meta %}
+{% load static %}
 
-{% block content %}  
+{% block content %}
 
-<div class = "login">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/css/style.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/log-reg-create.css' %}">
     
-    <h1>✿ Formulir Registrasi ✿</h1>  
+  </head>
+  <body>
 
-        <form method="POST" >  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
-            </table>  
-        </form>
+    <div class="register">
 
-    {% if messages %}  
-        <ul>   
+      <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+      </div>
+    
+      <form method="POST" >  
+        {% csrf_token %}  
+
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Username" class="form-control" required>
+
+        <label for="password">Password (8 letters minimum!)</label>
+        <input type="password" name="password1" placeholder="Password" class="form-control" required>
+
+        <label for="password">Password Confirmation</label>
+        <input type="password" name="password2" placeholder="Password" class="form-control" required>
+
+        <button type="submit" name = "submit" value="Register">Register</button>
+        
+        <a href="{% url 'todolist:login' %}">Back</a>
+
+        {% if messages %}  
+          <ul>   
             {% for message in messages %}  
-                <li>{{ message }}</li>  
-                {% endfor %}  
-        </ul>   
-    {% endif %}
+              <li>{{ message }}</li>  
+            {% endfor %}  
+          </ul>   
+        {% endif %}
 
-</div>  
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
 
 {% endblock content %}
