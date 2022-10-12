@@ -11,7 +11,7 @@
     $.get("http://localhost:8000/todolist/json", function(data) {
      for (i=0;i<data.length;i++){
         $(".card").append(
-            `<div class="card text-bg-primary mb-3">
+            `<div class="card-part">
             <h5 class="card-title">${data[i].fields.title}</h5>
             <p class="card-text">${data[i].fields.date}</p>
             <p class="card-text">${data[i].fields.description}</p>
@@ -24,7 +24,7 @@
         title : $('#title_field').val(),
         description : $('#description_field').val()},
         function (result) {
-            $('#todolist').append(`<div class="card-body">
+            $('#todolist').append(`<div class="card-part">
                 <h5 class="card-title">${result.fields.title}</h5>
                 <p class="card-text">${result.fields.date}</p>
                 <p class="card-text">${result.fields.description}</p>
@@ -39,11 +39,8 @@
 </head>
 
 <div class="card" style="width: 18rem;" id="todolist">
-  <!-- <div class="card-body">
-    <h5 class="card-title"></h5>
-    <p class="card-text"></p>
-  <p class="card-text"></p> -->
-</div>
+  <div class="container">
+  </div>
 </div>
 
 
@@ -54,7 +51,31 @@
         font-family:Arial, Helvetica, sans-serif;
         text-align: center;
     }
-
+    .card-part{
+    display: grid;
+    border-radius: 5px;
+    margin:0px;
+    border:1px solid #DDDDDD;
+    background-color: pink;
+    padding-bottom: 20px;
+    }
+    .card-title h1{
+    margin:0px;
+    color:#4C4C4C;
+    font-size:23px;
+    padding: 15px 0px 8px 0px;
+    }
+    .card-text p{
+    min-height:10px;
+    overflow: hidden;
+    color:#848484;
+    margin:0px;
+    text-align: justify;
+    }
+    .card-description a{
+    border-radius:0px;
+    font-size: 11px;
+    }
 </style>
 
 
