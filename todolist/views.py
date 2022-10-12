@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import HttpResponse, render
 import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -11,6 +11,9 @@ from django.contrib.auth import logout
 from todolist.models import Task
 from todolist.forms import TaskForm
 from django.contrib import messages
+from django.core import serializers
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 
 # Create your views here.
@@ -101,3 +104,36 @@ def status(request,id):
     status_data.save()
     return HttpResponseRedirect(reverse('todolist:show_todolist'))
 
+@login_required(login_url='/todolist/login/')
+def show_json_todolist(request):
+    data_task = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data_task), content_type="application/json")
+
+def show_todolist_ajax(request):
+    data_task = Task.objects.filter(user=request.user)
+    context = {
+        'username' : request.user.username,
+        'list_task' : data_task,
+
+    }
+    return render(request, "todolist_ajax.html", context)
+
+
+@csrf_exempt
+def todolist_add(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        date = datetime.date.today()
+        user = request.user
+        todo = Task.objects.create(title=title, description=description, date=date, user=user)
+
+        result = {
+            'fields':{
+                'title':todo.title,
+                'description':todo.description,
+                'date':todo.date,
+            },
+            'pk':todo.pk
+        }
+        return JsonResponse(result)
