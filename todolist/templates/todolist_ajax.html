@@ -10,32 +10,30 @@
   $(document).ready(function(){
     $.get("http://localhost:8000/todolist/json", function(data) {
      for (i=0;i<data.length;i++){
-        $(".card").append(`<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-          <div class="card-body">
+        $(".card").append(
+            `<div class="card text-bg-primary mb-3">
             <h5 class="card-title">${data[i].fields.title}</h5>
             <p class="card-text">${data[i].fields.date}</p>
             <p class="card-text">${data[i].fields.description}</p>
           </div>`)
       }
-    });
-  })
-   $("#pesan").click(function(){
-    e.preventDefault();
-    $.post("/todolosit/add/",{
+    })
+    $("#pesan").click(function(){
+    event.preventDefault();
+    $.post("/todolist/add/",{
         title : $('#title_field').val(),
         description : $('#description_field').val()},
         function (result) {
-          console.log(result)
             $('#todolist').append(`<div class="card-body">
-              <div class="card-body">
                 <h5 class="card-title">${result.fields.title}</h5>
-                <p class="card-text">${result.fields.dateto}</p>
+                <p class="card-text">${result.fields.date}</p>
                 <p class="card-text">${result.fields.description}</p>
                 </div>`)
             $('#title_field').val(''),
             $('#description_field').val('')
         })
     })
+  })
 
 </script>
 </head>
@@ -56,6 +54,7 @@
         font-family:Arial, Helvetica, sans-serif;
         text-align: center;
     }
+
 </style>
 
 
@@ -76,17 +75,17 @@
             <form>
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Task:</label>
-                <input type="text" class="form-control" id="#title_field">
+                <input type="text" class="form-control" id="title_field">
               </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label">Description:</label>
-                <textarea class="form-control" id="#description_field"></textarea>
+                <textarea class="form-control" id="description_field"></textarea>
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary"id="pesan" data-bs-dismiss="modal">Add</button>
+            <button type="button" class="btn btn-primary" id="pesan" data-bs-dismiss="modal">Add</button>
           </div>
         </div>
       </div>

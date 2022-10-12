@@ -117,8 +117,7 @@ def show_todolist_ajax(request):
 
     }
     return render(request, "todolist_ajax.html", context)
-
-
+    
 @csrf_exempt
 def todolist_add(request):
     if request.method == 'POST':
