@@ -14,7 +14,7 @@
             `<div class="card-part">
             <h5 class="card-title">${data[i].fields.title}</h5>
             <p class="card-text">${data[i].fields.date}</p>
-            <p class="card-text">${data[i].fields.description}</p>
+            <p class="card-description">${data[i].fields.description}</p>
           </div>`)
       }
     })
@@ -24,10 +24,10 @@
         title : $('#title_field').val(),
         description : $('#description_field').val()},
         function (result) {
-            $('#todolist').append(`<div class="card-part">
+            $('.card').append(`<div class="card-part" >
                 <h5 class="card-title">${result.fields.title}</h5>
                 <p class="card-text">${result.fields.date}</p>
-                <p class="card-text">${result.fields.description}</p>
+                <p class="card-description">${result.fields.description}</p>
                 </div>`)
             $('#title_field').val(''),
             $('#description_field').val('')
@@ -37,27 +37,40 @@
 
 </script>
 </head>
-
-<div class="card" style="width: 18rem;" id="todolist">
-  <div class="container">
-  </div>
-</div>
-
-
-
 <style>
     body {
+        display: flex;
+        margin:auto;
         background: linear-gradient(#9F98E8, #aff6cf);
         font-family:Arial, Helvetica, sans-serif;
         text-align: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        max-width: 100%;
+    }
+    .card{
+      background: linear-gradient(#9F98E8, #aff6cf);
+      justify-content: center;
+      width: 100%;
     }
     .card-part{
+    background: linear-gradient(#9F98E8, #aff6cf);
+    text-align: center;
     display: grid;
-    border-radius: 5px;
-    margin:0px;
-    border:1px solid #DDDDDD;
-    background-color: pink;
-    padding-bottom: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    width: 90%;
+    margin: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border: solid 2px #fcad02;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    max-width:100%;
     }
     .card-title h1{
     margin:0px;
@@ -68,7 +81,7 @@
     .card-text p{
     min-height:10px;
     overflow: hidden;
-    color:#848484;
+    /* color:#848484; */
     margin:0px;
     text-align: justify;
     }
@@ -80,10 +93,13 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"style="text-align:endblock">
     Add Task
   </button>
- 
+  <div class="card" style="width: 18rem;" id="todolist">
+    <div class="container">
+    </div>
+  </div>  
     <!-- </table> -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
